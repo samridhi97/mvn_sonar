@@ -2,7 +2,11 @@ pipeline {
    agent any
 
    stages {
-     
+     stage('Git SCM') {
+         steps {
+            git 'https://github.com/samridhi97/mvn_sonar.git'
+         }
+      }
 stage('Build') {
 		steps {
 			withSonarQubeEnv('sonar') {
