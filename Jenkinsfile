@@ -2,11 +2,7 @@ pipeline {
    agent any
 
    stages {
-      stage('Git SCM') {
-         steps {
-            git 'https://github.com/samridhi97/mvn_sonar.git'
-         }
-      }
+     
 stage('Build') {
 		steps {
 			withSonarQubeEnv('sonar') {
@@ -23,7 +19,7 @@ stage('Build') {
           }      
 	   stage('Deploy'){
 		   steps{
-			   sh '/opt/maven/bin/mvn clean deploy -Dmaven.test.skip=true'
+			   sh '/opt/maven/bin/mvn clean install -Dmaven.test.skip=true'
 		   }}
    }
 }
