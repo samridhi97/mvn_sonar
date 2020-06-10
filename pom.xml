@@ -32,7 +32,7 @@
 	<distributionManagement>
 	  <snapshotRepository>
 	    <id>artifactory</id>
-	    <url>http://18.219.118.150:8081/artifactory/example-repo-local</url>
+	    <url>http://18.219.118.150:8081/artifactory/libs-snapshot-local</url>
 	  </snapshotRepository>
 	</distributionManagement>
 </project>
